@@ -67,3 +67,25 @@ jobs:
         run: pnpm nx release --skip-publish --first-release ${{ inputs.version }}
         env:
           GH_TOKEN: ${{ secrets.MONETIS_BOT_TOKEN }}
+
+  deploy:
+    name: Deploy
+    needs:
+      - release
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment: production
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: ./.github/actions/setup
+        with:
+          fundamentry-token: ${{ secrets.FUNDAMENTRY_TOKEN }}
+
+      - name: Deploy
+        run: pnpm deploy
+        env:
+          ENVIRONMENT: production
+          SANITY_AUTH_TOKEN: ${{ secrets.SANITY_AUTH_TOKEN }}
+          SANITY_STUDIO_CORE_PROJECT_ID: ${{ vars.SANITY_STUDIO_CORE_PROJECT_ID }}
+          SANITY_STUDIO_CORE_DATASET: ${{ vars.SANITY_STUDIO_CORE_DATASET }}

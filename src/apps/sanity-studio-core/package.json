@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json.schemastore.org/package",
+  "name": "@monetis-io/sanity-studio-core",
+  "version": "0.0.0",
+  "description": "Sanity Studio to manage core data model.",
+  "contributors": [
+    {
+      "name": "Alexander Zakharov (azaxarov)",
+      "email": "alexander.zakharov@monetis.io"
+    }
+  ],
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "build": "run-s clean compile sanity:build",
+    "clean": "run-p clean:lib clean:coverage",
+    "clean:coverage": "rimraf coverage",
+    "clean:lib": "rimraf lib",
+    "compile": "tsc",
+    "deploy": "run-p sanity:deploy",
+    "sanity:build": "sanity build lib -y",
+    "sanity:deploy": "PROJECT_ID=$SANITY_STUDIO_CORE_PROJECT_ID DATASET=$SANITY_STUDIO_CORE_DATASET sanity deploy lib -y --url=monetis",
+    "sanity:dev": "sanity dev",
+    "sanity:preview": "sanity preview lib",
+    "start": "run-s sanity:dev"
+  },
+  "dependencies": {
+    "@sanity/vision": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "sanity": "catalog:",
+    "styled-components": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@fundamentry/eslint-config-typescript-react": "catalog:",
+    "@typescript-eslint/eslint-plugin": "catalog:",
+    "@typescript-eslint/parser": "catalog:",
+    "eslint": "catalog:",
+    "eslint-config-airbnb": "catalog:",
+    "eslint-import-resolver-typescript": "catalog:",
+    "eslint-plugin-deprecation": "catalog:",
+    "eslint-plugin-import": "catalog:",
+    "eslint-plugin-jsx-a11y": "catalog:",
+    "eslint-plugin-react": "catalog:",
+    "eslint-plugin-react-hooks": "catalog:",
+    "npm-run-all": "catalog:",
+    "rimraf": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:"
+  }
+}

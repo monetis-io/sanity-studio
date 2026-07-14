@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json.schemastore.org/eslintrc",
+  "extends": [
+    "@fundamentry/eslint-config-json",
+    "@fundamentry/eslint-config-typescript-react",
+    "@fundamentry/eslint-config-prettier"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "./src/**/*"
+      ],
+      "env": {
+        "node": true,
+        "browser": true
+      },
+      "globals": {
+        "globalThis": "readonly"
+      },
+      "settings": {
+        "import/internal-regex": "^@project"
+      },
+      "rules": {
+        "@typescript-eslint/no-empty-object-type": [
+          "error",
+          {
+            "allowInterfaces": "always"
+          }
+        ],
+        "@typescript-eslint/no-empty-interface": [
+          "error",
+          {
+            "allowSingleExtends": true
+          }
+        ],
+        "import/order": [
+          "error",
+          {
+            "groups": [
+              "builtin",
+              "external",
+              "internal",
+              "parent",
+              "sibling",
+              "index",
+              "object"
+            ],
+            "pathGroups": [
+              {
+                "pattern": "@fundamentry/*",
+                "group": "internal",
+                "position": "before"
+              },
+              {
+                "pattern": "@monetis-io/*",
+                "group": "internal",
+                "position": "before"
+              },
+              {
+                "pattern": "@(app|src|project)/*",
+                "group": "parent",
+                "position": "before"
+              }
+            ],
+            "pathGroupsExcludedImportTypes": [
+              "@fundamentry/*",
+              "@monetis-io/*",
+              "@(app|src|project)/*"
+            ],
+            "newlines-between": "always",
+            "alphabetize": {
+              "order": "asc",
+              "caseInsensitive": true,
+              "orderImportKind": "desc"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

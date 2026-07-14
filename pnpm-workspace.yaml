@@ -11,6 +11,7 @@ catalog:
   '@fundamentry/typescript-config': 2.0.0
   '@nx/eslint': 23.0.2
   '@nx/js': 23.0.2
+  '@sanity/vision': 6.5.0
   '@typescript-eslint/eslint-plugin': 8.63.0
   '@typescript-eslint/parser': 8.63.0
   'commitizen': 4.3.2
@@ -31,10 +32,23 @@ catalog:
   'npm-run-all': 4.1.5
   'nx': 23.0.2
   'prettier': 3.9.5
+  'react': 19.2.7
+  'react-dom': 19.2.7
   'rimraf': 6.1.3
+  'sanity': 6.5.0
+  'styled-components': 6.4.3
   'typescript': 6.0.3
+  'vite': 8.1.5
+  'zod': 4.4.3
+
+overrides:
+  '@vercel/frameworks>js-yaml': '3.15.0'
+  '@vercel/frameworks>smol-toml': '1.6.1'
+  '@sanity/uuid': '3.0.3'
+  'typeid-js>uuid': '11.1.1'
 
 allowBuilds:
+  esbuild: true
   nx: false
   unrs-resolver: false
 
@@ -45,3 +59,10 @@ minimumReleaseAgeExclude:
   - '@fundamentry/eslint-config-typescript-react@1.0.17'
   - '@fundamentry/eslint-config-typescript@1.1.11'
   - '@fundamentry/typescript-config@2.0.0'
+  - '@sanity/diff@6.5.0'
+  - '@sanity/mutator@6.5.0'
+  - '@sanity/schema@6.5.0'
+  - '@sanity/types@6.5.0'
+  - '@sanity/util@6.5.0'
+  - 'sanity@6.5.0'
+  - '@sanity/vision@6.5.0'

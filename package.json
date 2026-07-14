@@ -24,6 +24,7 @@
   "scripts": {
     "build": "nx run-many -t build",
     "commit": "cz",
+    "deploy": "nx run-many -t deploy",
     "lint": "run-p lint:eslint",
     "lint:eslint": "run-p lint:eslint:workspace lint:eslint:packages",
     "lint:eslint:fix": "run-p lint:eslint:workspace:fix lint:eslint:packages:fix",
