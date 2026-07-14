@@ -1,0 +1,8 @@
+.DS_Store
+
+.vscode
+.nx
+.sanity
+
+lib
+node_modules

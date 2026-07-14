@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json.schemastore.org/package",
+  "name": "@monetis-io/sanity-studio",
+  "description": "Shared monorepo for Sanity Studio projects and tooling.",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:monetis-io/sanity-studio.git"
+  },
+  "contributors": [
+    {
+      "name": "Alexander Zakharov (azaxarov)",
+      "email": "alexander.zakharov@monetis.io"
+    }
+  ],
+  "license": "UNLICENSED",
+  "private": true,
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "24.18.0"
+    }
+  },
+  "packageManager": "pnpm@11.11.0+sha512.4463f65fd80ed80d69bc1d4bf163ee94f605c7380fc318bb5b2ebe15f8cd12d49c51a4d59e951b401e764d3b6ca751cbf51bc50ed7001a6bcb4935e684c34882",
+  "scripts": {
+    "build": "nx run-many -t build",
+    "commit": "cz",
+    "lint": "run-p lint:eslint",
+    "lint:eslint": "run-p lint:eslint:workspace lint:eslint:packages",
+    "lint:eslint:fix": "run-p lint:eslint:workspace:fix lint:eslint:packages:fix",
+    "lint:eslint:packages": "nx run-many -t lint",
+    "lint:eslint:packages:fix": "nx run-many -t lint -- --fix",
+    "lint:eslint:staged:fix": "eslint --ext ts,tsx,mts,cts,js,jsx,mjs,cjs,json --fix",
+    "lint:eslint:workspace": "eslint --ext json .",
+    "lint:eslint:workspace:fix": "eslint --ext json . --fix",
+    "lint:fix": "run-p lint:eslint:fix",
+    "lint:staged:fix": "run-p lint:eslint:staged:fix -- {@}",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "catalog:",
+    "@commitlint/config-conventional": "catalog:",
+    "@fundamentry/eslint-config-json": "catalog:",
+    "@fundamentry/eslint-config-prettier": "catalog:",
+    "@fundamentry/typescript-config": "catalog:",
+    "@nx/eslint": "catalog:",
+    "@nx/js": "catalog:",
+    "commitizen": "catalog:",
+    "cz-conventional-changelog": "catalog:",
+    "eslint": "catalog:",
+    "eslint-config-prettier": "catalog:",
+    "eslint-plugin-json-format": "catalog:",
+    "eslint-plugin-prettier": "catalog:",
+    "husky": "catalog:",
+    "lint-staged": "catalog:",
+    "npm-run-all": "catalog:",
+    "nx": "catalog:",
+    "prettier": "catalog:",
+    "rimraf": "catalog:",
+    "typescript": "catalog:"
+  }
+}

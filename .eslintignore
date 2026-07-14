@@ -1,0 +1,12 @@
+.DS_Store
+
+.github
+.husky
+.vscode
+.nx
+
+src
+lib
+node_modules
+
+README.md

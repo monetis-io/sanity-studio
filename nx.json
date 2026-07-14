@@ -1,0 +1,67 @@
+{
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "analytics": false,
+  "defaultBase": "main",
+  "plugins": [
+    {
+      "plugin": "@nx/eslint/plugin",
+      "options": {
+        "targetName": "lint"
+      }
+    }
+  ],
+  "namedInputs": {
+    "default": [
+      "{projectRoot}/**/*",
+      "sharedGlobals"
+    ],
+    "sharedGlobals": [
+      "{workspaceRoot}/.eslintrc.json",
+      "{workspaceRoot}/.eslintignore"
+    ]
+  },
+  "targetDefaults": {
+    "build": {
+      "dependsOn": [
+        "^build"
+      ],
+      "cache": true,
+      "outputs": [
+        "{projectRoot}/lib"
+      ]
+    },
+    "lint": {
+      "cache": true,
+      "inputs": [
+        "default",
+        "^default"
+      ]
+    }
+  },
+  "release": {
+    "projects": [
+      "*"
+    ],
+    "projectsRelationship": "independent",
+    "version": {
+      "conventionalCommits": true,
+      "adjustSemverBumpsForZeroMajorVersion": false,
+      "updateDependents": "always",
+      "preVersionCommand": "pnpm build"
+    },
+    "changelog": {
+      "projectChangelogs": {
+        "createRelease": "github",
+        "renderOptions": {
+          "authors": false,
+          "applyUsernameToAuthors": false,
+          "commitReferences": true,
+          "versionTitleDate": false
+        }
+      }
+    },
+    "git": {
+      "commitMessage": "chore(release): release [skip ci]"
+    }
+  }
+}
