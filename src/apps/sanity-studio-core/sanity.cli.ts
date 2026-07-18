@@ -11,7 +11,7 @@ export default defineCliConfig({
   },
   deployment: {
     autoUpdates: true,
-    appId: 'svk3d69izt2oreop200b05cc',
+    appId: 'c1nqmmuyyb404v8uqd2vvv2i',
   },
   server: {
     port: 8000,
