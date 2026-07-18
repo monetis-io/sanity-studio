@@ -46,6 +46,7 @@ overrides:
   '@vercel/frameworks>smol-toml': '1.6.1'
   '@sanity/uuid': '3.0.3'
   'typeid-js>uuid': '11.1.1'
+  'adm-zip': '0.6.0'
 
 allowBuilds:
   esbuild: true

@@ -123,6 +123,7 @@ overrides:
   '@vercel/frameworks>smol-toml': 1.6.1
   '@sanity/uuid': 3.0.3
   typeid-js>uuid: 11.1.1
+  adm-zip: 0.6.0
 
 importers:
 
@@ -2890,13 +2891,9 @@ packages:
     resolution: {integrity: sha512-XNAb/a6TCqou+TufU8/u11HCu9x1gYvOoxLwtlXgIqmkrYQADVv6ljyW2zwiPhHz9R1gItAWpuDrdJMmrOBFEA==}
     engines: {node: '>= 16.0.0'}
 
-  adm-zip@0.5.10:
-    resolution: {integrity: sha512-x0HvcHqVJNTPk/Bw8JbLWlWoo6Wwnsug0fnYYro1HBrjxZ3G7/AZk7Ahv8JwDe1uIcz8eBqvu86FuF1POiG7vQ==}
-    engines: {node: '>=6.0'}
-
-  adm-zip@0.5.18:
-    resolution: {integrity: sha512-ufJnssQGbxzLNS1Ho9bCtX4rQKCCvoVuDLHoJyc3F9dOGDB4BkWs2Ci0kv53lqocAEQ/Cbi+I2XCsNYGqVYqng==}
-    engines: {node: '>=12.0'}
+  adm-zip@0.6.0:
+    resolution: {integrity: sha512-XleryMhbuksdKtofnWZ9Sk+4CUTbms4Mb/EU32SZwToAyZ5RgVos/ki8n+yr0LWHOGKuakbXTuuYNHLQjhddgg==}
+    engines: {node: '>=14.0'}
 
   agent-base@6.0.2:
     resolution: {integrity: sha512-RZNwNclF7+MS/8bDg70amg32dyeZGZxiDuQmZxKLAlQjr3jGyLx+4Kkk58UO7D2QdgFIQCovuSuZESne6RG6XQ==}
@@ -8345,7 +8342,7 @@ snapshots:
       '@module-federation/managers': 2.7.0
       '@module-federation/sdk': 2.7.0
       '@module-federation/third-party-dts-extractor': 2.7.0
-      adm-zip: 0.5.10
+      adm-zip: 0.6.0
       isomorphic-ws: 5.0.0(ws@8.21.0)
       node-schedule: 2.1.1
       typescript: 6.0.3
@@ -9293,7 +9290,7 @@ snapshots:
       '@sanity/blueprints': 0.20.2
       '@sanity/blueprints-parser': 0.4.0
       '@sanity/client': 7.23.0
-      adm-zip: 0.5.18
+      adm-zip: 0.6.0
       array-treeify: 0.1.5
       cardinal: 2.1.1
       empathic: 2.0.1
@@ -9908,9 +9905,7 @@ snapshots:
 
   address@2.0.3: {}
 
-  adm-zip@0.5.10: {}
-
-  adm-zip@0.5.18: {}
+  adm-zip@0.6.0: {}
 
   agent-base@6.0.2(supports-color@7.2.0):
     dependencies:
