@@ -1,3 +1,9 @@
+## 1.1.0
+
+### 🚀 Features
+
+- **@monetis-io/sanity-studio-core:** change workspace configuration ([0a2d555](https://github.com/monetis-io/sanity-studio/commit/0a2d555))
+
 # 1.0.0
 
 ### 🚀 Features
