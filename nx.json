@@ -7,7 +7,11 @@
       "plugin": "@nx/eslint/plugin",
       "options": {
         "targetName": "lint"
-      }
+      },
+      "include": [
+        "src/apps/**",
+        "src/packages/**"
+      ]
     }
   ],
   "namedInputs": {
