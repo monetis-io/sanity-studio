@@ -61,7 +61,7 @@
       }
     },
     "git": {
-      "commitMessage": "chore(release): release [skip ci]"
+      "commitMessage": "chore: release [skip ci]"
     }
   }
 }
