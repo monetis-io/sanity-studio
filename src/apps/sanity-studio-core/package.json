@@ -25,7 +25,9 @@
     "start": "run-s sanity:dev"
   },
   "dependencies": {
+    "@sanity/client": "catalog:",
     "@sanity/vision": "catalog:",
+    "groq": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:",
     "sanity": "catalog:",
