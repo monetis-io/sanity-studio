@@ -40,6 +40,7 @@
   "devDependencies": {
     "@commitlint/cli": "catalog:",
     "@commitlint/config-conventional": "catalog:",
+    "@commitlint/types": "catalog:",
     "@fundamentry/eslint-config-json": "catalog:",
     "@fundamentry/eslint-config-prettier": "catalog:",
     "@fundamentry/eslint-config-typescript": "catalog:",
