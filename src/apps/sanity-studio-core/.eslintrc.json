@@ -33,6 +33,14 @@
             "allowSingleExtends": true
           }
         ],
+        "no-underscore-dangle": [
+          "error",
+          {
+            "allow": [
+              "_id"
+            ]
+          }
+        ],
         "import/order": [
           "error",
           {
