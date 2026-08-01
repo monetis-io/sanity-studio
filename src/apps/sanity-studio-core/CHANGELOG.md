@@ -1,3 +1,9 @@
+## 1.1.1
+
+### 🩹 Fixes
+
+- **@monetis-io/sanity-studio-core:** ensure customers are fetched in all runtimes ([2b649f4](https://github.com/monetis-io/sanity-studio/commit/2b649f4))
+
 ## 1.1.0
 
 ### 🚀 Features
