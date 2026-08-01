@@ -1,3 +1,9 @@
+## 1.1.2
+
+### 🩹 Fixes
+
+- **@monetis-io/sanity-studio-core:** dynamically import CLI client ([6695511](https://github.com/monetis-io/sanity-studio/commit/6695511))
+
 ## 1.1.1
 
 ### 🩹 Fixes
